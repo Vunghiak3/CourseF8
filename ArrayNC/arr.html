@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        lst = [
+            {
+                id: 1,
+                name: 'html',
+                price: 0
+            },
+            {
+                id: 2,
+                name: 'css',
+                price: 0
+            },
+            {
+                id: 3,
+                name: 'js',
+                price: 250
+            },
+            {
+                id: 4,
+                name: 'js',
+                price: 0
+            }
+        ]
+
+        // For
+        console.log("🚀 ~ file: arr.html:27 ~ For")
+        for(var i = 0; i < lst.length; i++){
+            console.log("🚀 ~ file: arr.html:28 ~ lst[i]", lst[i])
+        }
+
+        // For in
+        console.log("🚀 ~ file: arr.html:33 ~ For in")
+        for(var i in lst){
+            console.log("🚀 ~ file: arr.html:34 ~ i", i)
+        }
+
+        // For of
+        console.log("🚀 ~ file: arr.html:39 ~ For of")
+        for(var i of lst){
+            console.log("🚀 ~ file: arr.html:41 ~ i", i)
+        }
+
+        // ForEach
+        console.log("🚀 ~ file: arr.html:33 ~ ForEach")
+        lst.forEach(function(item, index){
+            console.log("🚀 ~ file: arr.html:27 ~ lst.forEach ~ index", index)
+            console.log("🚀 ~ file: arr.html:27 ~ lst.forEach ~ item", item)
+        });
+
+        // Every --Tat ca phan tu trong mang phai thoa man dieu kien--
+        console.log("🚀 ~ file: arr.html:40 ~ Every")
+        var isFree = lst.every(function(item){
+            return item.price === 0
+        })
+        console.log("🚀 ~ file: arr.html:34 ~ isFree=lst.every ~ isFree", isFree)
+        
+        // Some --Chi can 1 phan tu trong mang thoa man dieu kien--
+        console.log("🚀 ~ file: arr.html:59 ~ Some")
+        var isCheck = lst.some(function(item){
+            return item.price !== 0
+        })
+        console.log("🚀 ~ file: arr.html:63 ~ isCheck=lst.some ~ isCheck", isCheck)
+
+        // Find --Chi tra ve 1 phan tu thoa man dk--
+        console.log("🚀 ~ file: arr.html:66 ~ Find")
+        var findCourse = lst.find(function(item){
+            return item.name == 'js'
+        })
+        console.log("🚀 ~ file: arr.html:68 ~ findCourse ~ findCourse", findCourse)
+
+        // filter --Tra ve tat ca phan tu thoa man dk--
+        var findCourse = lst.filter(function(item){
+            return item.name == 'js'
+        })
+        console.log("🚀 ~ file: arr.html:68 ~ findCourse ~ findCourse", findCourse)
+
+        // Map method --Chinh sua/ thay doi element trong arr
+        console.log("🚀 ~ file: arr.html:74 ~ Map")
+        var newCourse = lst.map()
+        // Reduce?
+    </script>
+</body>
+</html>
