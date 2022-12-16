@@ -1,9 +1,15 @@
+var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 Array.prototype.forEachFake = function(forEachFake){
     const len = this.length
     for(var i = 0; i < len; i++){
         forEachFake(this[i], i)
     }
 }
+
+lst.forEachFake(function(num, index){
+    console.log("🚀 ~ file: callback.js:10 ~ newlst ~ num, index", num, index)
+})
 
 Array.prototype.reduceFake = function(reduceFake, result){
     var i = 0
@@ -18,6 +24,11 @@ Array.prototype.reduceFake = function(reduceFake, result){
     return result
 }
 
+var totalLst = lst.reduceFake(function(total, num){
+    return total + num
+})
+console.log("🚀 ~ file: callback.js:27 ~ totalLst ~ totalLst", totalLst)
+
 Array.prototype.findFake = function(findFake){
     const len = this.length
     for(var i = 0; i < len; i++){
@@ -25,6 +36,11 @@ Array.prototype.findFake = function(findFake){
         if(result) return this[i]
     }
 }
+
+var findLst = lst.findFake(function(item){
+    return item == 3
+})
+console.log("🚀 ~ file: callback.js:42 ~ findLst ~ findLst", findLst)
 
 Array.prototype.filterFake = function(filterFake){
     const output = [], len = this.length
@@ -35,22 +51,6 @@ Array.prototype.filterFake = function(filterFake){
     if(output.length < 2) return output[0]
     return output
 }
-
-var lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-lst.forEachFake(function(num, index){
-    console.log("🚀 ~ file: callback.js:10 ~ newlst ~ num, index", num, index)
-})
-
-var totalLst = lst.reduceFake(function(total, num){
-    return total + num
-})
-console.log("🚀 ~ file: callback.js:27 ~ totalLst ~ totalLst", totalLst)
-
-var findLst = lst.findFake(function(item){
-    return item == 3
-})
-console.log("🚀 ~ file: callback.js:42 ~ findLst ~ findLst", findLst)
 
 var filterLst = lst.filterFake(function(item){
     return item == 1
