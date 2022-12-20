@@ -1,0 +1,12 @@
+Document Object Model
+
+**-----------**
+HTML DOM có 3 thành phần:
+1. Element
+2. Attribute
+3. Text
+**-----------**
+javascript: browes | sever
+
+browes: html -> dom -> dom api (thuộc web api)
+api: application programing interface
