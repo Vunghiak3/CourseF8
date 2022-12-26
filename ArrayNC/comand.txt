@@ -1,0 +1,13 @@
+for
+for in
+for of
+forEach
+every
+some
+find
+filter
+map
+join
+reduce
+callback
+this.hasOwnProperty()
